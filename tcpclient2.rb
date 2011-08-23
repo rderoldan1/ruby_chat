@@ -2,8 +2,22 @@ require 'socket'
 
 client = TCPSocket.new("localhost", 20000)
 
-while line = gets
-	client.write(line)
-        msj = client.recv( 100 )
-	puts msj
- end
+  client.puts("need connection")
+
+Thread.new do
+  loop do
+    r = gets.chomp
+    puts "lei #{r}, voy a mandarlo al servidor"
+    client.puts(r)
+  end
+end
+
+Thread.new do 
+  loop do 
+     s = client.gets.chomp
+     puts "El servidor dijo #{s}"
+  end
+end
+
+loop do
+end

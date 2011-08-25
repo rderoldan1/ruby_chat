@@ -2,7 +2,7 @@ require 'socket'
 
 client = TCPSocket.new("localhost", 20000)
 
-  client.puts("need connection")
+  #client.puts("need connection")
 
 Thread.new do
   loop do
@@ -14,7 +14,7 @@ end
 
 Thread.new do 
   loop do 
-     s = client.gets.chomp
+     s = client.gets
      puts "El servidor dijo #{s}"
   end
 end

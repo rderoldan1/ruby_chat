@@ -1,0 +1,21 @@
+<%= div_for company do %>
+  <div class="company-header">
+    <div class="left">
+      <h2><%= company.name %></h2>
+      <span class="price"><%= company.charge_price %></span>
+      <span class="city"><%= company.city %></span>
+    </div>
+    
+    <div class="right"><span class="logo">LOGO</span></div>
+    <%= clear %>
+  </div>
+  <!-- End of div.company-header -->
+  
+  <div class="company-slider">
+    <div class="slider">FOTOS </div>
+    <div class="description">Descripción</div>
+  </div>
+  <!-- End of div.company-slider -->
+  <%= clear %>
+<% end %>
+<!-- end of div.company -->

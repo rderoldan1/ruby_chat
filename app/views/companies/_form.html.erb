@@ -1,0 +1,23 @@
+<%= form_for(@company) do |f| %>
+  <%= render :partial => "shared/object_errors", :locals => {:object => @company} %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <% Company::PRICES.each_with_index do |price, index| %>
+      <p>
+        <%= f.radio_button :charge_price, price, :id => "company_price_#{index+1}" %>
+        <%= f.label "price_#{index+1}", price %>
+      </p>
+    <% end %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

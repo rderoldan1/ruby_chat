@@ -1,4 +1,5 @@
 @import 'bourbon/bourbon';
+@import 'companies';
 
 body{
   background: #EEE;
@@ -12,60 +13,3 @@ body{
 .left  {float: left;}
 .right {float: right;}
 .clear {clear: both;}
-
-.caja{
-  width: 395px;
-  background: #FFF;
-  border: 1px solid #CCC;
-  margin: 10px 20px 35px;
-  padding: 20px;
-  float: left;
-  
-  @include border-radius(8px);
-  @include box-shadow(0px 0px 4px #000);
-  
-  
-  .caja-arriba{
-    border-bottom: 1px solid #BBB;
-    padding-bottom: 15px;
-    
-    h2{
-      margin: 0; padding: 0;
-      font-size: 18px;
-    }
-    
-    
-  }
-  
-  .caja-abajo{
-    margin-top: 20px;
-    
-    
-    .slider{
-      background: #DDD;
-      border: 1px solid #000;
-      height: 300px;
-    }
-    
-    .description{
-      margin-top: 15px;
-    }
-  }
-  
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -9,6 +9,10 @@ gem 'sqlite3'
 
 gem 'sass'
 gem 'bourbon'
+gem 'paperclip'
+gem 'nifty-generators'
+gem 'make_permalink'
+gem 'nested_form'
 
 # Use unicorn as the web server
 # gem 'unicorn'

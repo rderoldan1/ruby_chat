@@ -1,4 +1,6 @@
 Sortfolio::Application.routes.draw do
+  resources :companies
+
   get "static/site_index"
 
   # The priority is based upon order of creation:

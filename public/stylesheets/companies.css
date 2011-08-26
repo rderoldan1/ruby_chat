@@ -40,48 +40,6 @@
   100% {
     opacity: 0; } }
 
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-@-moz-keyframes fade-in {
-  0% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-@keyframes fade-in {
-  0% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-@-webkit-keyframes fade-out {
-  0% {
-    opacity: 1; }
-
-  100% {
-    opacity: 0; } }
-
-@-moz-keyframes fade-out {
-  0% {
-    opacity: 1; }
-
-  100% {
-    opacity: 0; } }
-
-@keyframes fade-out {
-  0% {
-    opacity: 1; }
-
-  100% {
-    opacity: 0; } }
-
 .company {
   width: 395px;
   background: #FFF;
@@ -114,19 +72,3 @@
       height: 300px; }
     .company .company-slider .description {
       margin-top: 15px; }
-
-body {
-  background: #EEE; }
-
-.wrapper {
-  width: 960px;
-  margin: 0 auto; }
-
-.left {
-  float: left; }
-
-.right {
-  float: right; }
-
-.clear {
-  clear: both; }

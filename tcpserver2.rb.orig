@@ -31,8 +31,13 @@ class Server
 				puts line
 				connection.puts ("Received")
 					@client.each do |name, conn|
+<<<<<<< HEAD
+			                	if  conn.eql? connection
+						puts "Is the same user"
+=======
 			                	if  conn.eql? connection 
 						puts "is the same user 2"
+>>>>>>> 9aca714cbb2d2bd6c3abee74d8a5bb1663e087d8
 						else
 						puts name, conn
 						conn.puts ("#{n} says #{line}")

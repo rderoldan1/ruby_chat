@@ -14,8 +14,9 @@ end
 
 Thread.new do 
   loop do 
-     s = client.gets
+     s = client.gets.chomp
      puts "El servidor dijo #{s}"
+ #    break if s =~ /Clossing the connection/
   end
 end
 

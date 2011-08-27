@@ -1,0 +1,15 @@
+@import 'bourbon/bourbon';
+@import 'companies';
+
+body{
+  background: #EEE;
+}
+
+.wrapper{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.left  {float: left;}
+.right {float: right;}
+.clear {clear: both;}

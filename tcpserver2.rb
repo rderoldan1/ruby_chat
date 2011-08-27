@@ -20,7 +20,14 @@ class Server
 						puts n 
 
 				while line = connection.gets
-				break if line =~ /quit/
+				         if line =~ /quit/
+					res = @client.find (ruben)
+					puts res
+					puts "oe entre"
+					connection.puts ("Closing the connection")
+					connection.close
+					end
+				
 				puts line
 				connection.puts ("Received")
 					@client.each do |name, conn|
@@ -28,15 +35,12 @@ class Server
 						puts "is the same user 2"
 						else
 						puts name, conn
-						conn.puts ("#{name} says #{line}")
+						conn.puts ("#{n} says #{line}")
 						end#if					
 				           end#each
 			
 			end #while
-			res = @client.find (connection)
-			puts res.name
-			connection.puts ("Closing the connection")
-			connection.close
+			
 
 		end#Thread
 	end#loop

@@ -20,7 +20,7 @@ server = TCPServer.new(20000)
 				connection.puts ("Received")
 					@client.each do |name, conn|
 			                	if  conn.eql? connection
-						puts "is the same user"
+						puts "Is the same user"
 						else
 						puts name, conn
 						conn.puts (line)

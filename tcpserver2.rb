@@ -26,7 +26,15 @@ class Server
 					puts "oe entre"
 					connection.puts ("Closing the connection")
 					connection.close
+					end#if
+
+					if line =~ /list/
+						@client.each do |user, sock|
+						puts "entro list"
+						connection.puts user
+						end
 					end
+					
 				
 				puts line
 				connection.puts ("Received")

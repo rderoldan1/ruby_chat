@@ -20,13 +20,9 @@ class Server
 						puts n 
 
 				while line = connection.gets
-				         if line =~ /quit/
-					res = @client.find (ruben)
-					puts res
-					puts "oe entre"
-					connection.puts ("Closing the connection")
-					connection.close
-					end#if
+
+				        break if line =~ /quit/
+					
 
 					if line =~ /list/
 						@client.each do |user, sock|
@@ -48,6 +44,24 @@ class Server
 				           end#each
 			
 			end #while
+			@client.each do |name, sock|
+				if  sock.eql? connection
+				@client.each do |otherUser, otherSock|
+					if otherSock.eql? sock
+						puts "is the same user 3"					
+					else
+						lin = " #{name} is offline!"
+						otherSock.puts (lin)
+					end#if	
+				end#each
+				end#if
+			end#do
+		
+			#Decir al user q too bn
+			connection.puts ("Closing the connection")
+			connection.close
+			@client.each
+					
 			
 
 		end#Thread

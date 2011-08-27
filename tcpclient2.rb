@@ -1,6 +1,6 @@
 require 'socket'
 
-client = TCPSocket.new("localhost", 20000)
+client = TCPSocket.new('localhost', 20000)
 
   #client.puts("need connection")
 

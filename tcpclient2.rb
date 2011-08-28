@@ -2,31 +2,42 @@ require 'socket'
 
 puts "ip address"
 ip = gets
-if ip =~ /localhost/
-	ip='127.0.0.1' 
-end
+puts "port"
+port = gets
+	if ip =~ /lh/
+		ip='127.0.0.1' 
+	end 
 
-client = TCPSocket.new(ip, 20000)
+	if port =~ /df/
+		port = 20000
+	else
+		port = port.to_i
+	end
+
+
+
+@n = 0
+
+
+client = TCPSocket.new(ip, port)
   #client.puts("need connection")
 
-Thread.new do
-  loop do
-    r = gets.chomp
-   # puts "lei #{r}, voy a mandarlo al servidor"
-    client.puts(r)
-  end
-end
+	Thread.new do
+		  loop do
+			    r = gets.chomp
+			    client.puts(r)
+		  end
+	end
 
-Thread.new do 
-  loop do 
-	
-     	s = client.gets.chomp
-	
-  	 #puts "El servidor dijo #{s}"
-	puts "#{s}"
- 	#break if s =~ /Clossing the connection/
-  end
-end
+	Thread.new do 
+		  loop do 
+			  s = client.gets.chomp
+	        	  puts "#{s}"
+	           		  if s=~ /Closing/
+					@n= 1
+				  end
+		  end
+	end
 
-loop do
+while @n.eql? 0 do
 end

@@ -1,7 +1,18 @@
 require 'socket'
 
+
 class Server
-	 server = TCPServer.new(20000)
+
+	puts "type the port"
+	port = gets
+
+	if port =~ /df/
+		port = 20000
+	else
+		port = port.to_i
+	end
+	
+	 server = TCPServer.new(port)
         @client = {}
 
         puts "Waiting a connection"
@@ -19,6 +30,11 @@ class Server
 						i = 1
 					end#if
 			end#else
+			connection.puts "You are connected.\n Now you can send public  messages."
+
+			if @client.length.eql? 1
+				connection.puts "You are alone, wait for more users."
+			end#if
 		
 			@client.each do |name, sock|
 	                	if  sock.eql? connection
@@ -29,7 +45,7 @@ class Server
 				end#if	
 			end#each
 
-			connection.puts "You are connected.\n Now you can send public  messages."
+		
 			while line = connection.gets
 			        break if line =~ /quit/
 					if line =~  /help/

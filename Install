@@ -1,0 +1,26 @@
+Para poder correr ruby_chat en ubuntu, primero hay que instalar ruby.
+
+
+1. Abrimos la consola de ubuntu 
+2. cd /usr/src/ 
+3. sudo wget ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-1.9.2-p180.tar.gz 
+4. sudo tar xvf ruby-1.9.2-p180.tar.gz 
+5. cd ruby-1.9.2-p180 
+6. sudo ./configure --enable-pthread 
+7. sudo make 
+8. sudo make install 
+
+hora q ya tenemos la ultima version de ruby, vamos a actualizar las gemas GEM, que es algo parecido a apt-get 
+
+1. cd /usr/src/ 
+2. sudo wget http://production.cf.rubygems.org/rubygems/rubygems-1.7.2.tgz 
+3. sudo tar xvf rubygems-1.7.2.tgz 
+4. cd rubygems-1.7.2 
+5. sudo ruby setup.rb/ 
+
+
+ya con el sistema listo procedemos a ejecutar ruby_chat
+
+1. cd/directorio/ruby_chat
+2. ruby tcpserver2.rb  
+3. ruby tcpclient2.rb 

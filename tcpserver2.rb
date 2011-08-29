@@ -29,8 +29,8 @@ class Server
 						 @client [n] = connection
 						i = 1
 					end#if
-			end#else
-			connection.puts "You are connected.\n Now you can send public  messages."
+			end#while
+			connection.puts "You are connected.\n\nNow you can send public  messages."
 
 			if @client.length.eql? 1
 				connection.puts "You are alone, wait for more users."
@@ -49,24 +49,25 @@ class Server
 			while line = connection.gets
 			        break if line =~ /quit/
 					if line =~  /help/
-						connection.puts "list: show the online users\nquit: leave of the chat .\nprivate: send a message to some user.\nIf you like to send a message to everybody, only you should write the."
+						connection.puts "Server info:\nlist: show the online users\nquit: leave of the chat .\nprivate: send a message to some user.\nIf you like to send a message to everybody, only you should write the."
 					elsif line =~ /list/
 						@client.each do |user, sock|
 							connection.puts user
 						end#each
-							elsif line =~ /private/ 
+							elsif line=~ /private/
 					  			connection.puts "Write the destination user name"
 								line = connection.gets
-								@client.each do |name, sock|
 								j = 0								
 									while j.eql? 0														
 										if @client.include? line
-											if name.eql? line
-												connection.puts "Write the message"
-												message = connection.gets
-												sock.puts ("Private message from #{n} says : #{message}")
-												j=1
-											end#if
+											@client.each do |name, sock|
+												if name.eql? line
+													connection.puts "Write the message"
+													message = connection.gets
+													sock.puts ("Private message from #{n} says : #{message}")
+													j=1
+												end#if
+											end#each
 										else
 											connection.puts "This user doesn't exits, like you write to another user. tipe y/n"
 											line = connection.gets
@@ -80,15 +81,15 @@ class Server
 											end#if
 										end#if
 									end #while
-								end#each
+								#end#each
 						else
 							puts line
 							@client.each do |name, conn|
 					                	if  conn.eql? connection 
-									puts "-#{n} says #{line}"
+									puts "-#{n} says: #{line}"
 								else
 									puts name, conn
-									conn.puts ("Message from #{n} says #{line}")
+									conn.puts ("Message from #{n} says: #{line}")
 								end#if					
 						           end#each
 						end#else					

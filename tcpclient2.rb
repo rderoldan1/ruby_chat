@@ -12,8 +12,7 @@ port = gets
 		port = 20000
 	else
 		port = port.to_i
-	end
-
+         end
 
 
 @n = 0
@@ -39,5 +38,7 @@ client = TCPSocket.new(ip, port)
 		  end
 	end
 
-while @n.eql? 0 do
+while @n.eql? 0
 end
+#loop do
+#end

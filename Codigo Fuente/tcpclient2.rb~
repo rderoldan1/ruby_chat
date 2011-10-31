@@ -4,11 +4,11 @@ puts "ip address"
 ip = gets
 puts "port"
 port = gets
-	if ip =~ /localhost/
+	if ip =~ /lh/
 		ip='127.0.0.1' 
 	end 
 
-	if port =~ /default/
+	if port =~ /df/
 		port = 20000
 	else
 		port = port.to_i
@@ -17,7 +17,7 @@ port = gets
 
 @n = 0
 
-puts "type help in order to know the commands."
+
 client = TCPSocket.new(ip, port)
   #client.puts("need connection")
 

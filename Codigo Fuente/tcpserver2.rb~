@@ -6,7 +6,7 @@ class Server
 	puts "type the port"
 	port = gets
 
-	if port =~ /default/
+	if port =~ /df/
 		port = 20000
 	else
 		port = port.to_i

@@ -4,7 +4,7 @@ require 'socket'
 class Server
 
 	puts "type the port"
-	port = gets
+	port = gets.chomp
 
 	if port =~ /default/
 		port = 20000

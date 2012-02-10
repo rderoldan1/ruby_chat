@@ -1,9 +1,9 @@
 require 'socket'
 
 puts "ip address"
-ip = gets
+ip = gets.chomp
 puts "port"
-port = gets
+port = gets.chomp
 	if ip =~ /localhost/
 		ip='127.0.0.1' 
 	end 

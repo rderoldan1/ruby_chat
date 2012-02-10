@@ -1,3 +1,4 @@
+### Ruby-Chat
 Este es un pequeño chat desarrollado para la clase Telematica II 
 para correrlo basta con seguir estos pasos, teniendo en cuenta
 que se debe tener instalado ruby  version 1.9.2.
@@ -17,4 +18,7 @@ que se debe tener instalado ruby  version 1.9.2.
      que comandos te seran utiles para estar en el chat.
 5. Por defecto todos los mensajes seran privados.
 
+Desarrollado por:
+Ruben Espinosa Roldan [rderoldan1](www.github.com/rderoldan1)
+Jose Mateo Vidal Barrera [jvidalba1](www.www.github.com/jvidalba1)
 

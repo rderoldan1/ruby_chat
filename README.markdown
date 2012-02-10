@@ -7,29 +7,30 @@ que se debe tener instalado ruby  version 1.9.2.
 2. Se tiene que correr primero el servidor, te pedira que le entres
    un puerto, si escribe 'default' pondra un puerto por defecto.
 
-         $ ruby tcpserver2.rb
-         $ default
+         $ruby tcpserver2.rb
+         $default
 3. Abre otra consola para ejecutar el cliente, te pedira que le entres
    una ip del sevidor, si estas corriendo el servidor en el mismo computador
    ingresa 'localhost', luego pedira un puerto ingresa 'default' para entrar el puerto por defecto.
 		
-         $ ruby tcpclient2.rb
-	 $ localhost
-	 $ default
+        $ ruby tcpclient2.rb
+		$ localhost
+		$ default
 4. Si necesitas ayuda escribe el mesaje 'help', y obtendras como respuesta
    que comandos te seran utiles para estar en el chat.
 5. Por defecto todos los mensajes seran publicos.
 6. Para enviar un mesaje privado:
                 
-         $ private
-	 $ "escriba el nombre de usuario"
-         $ nombre-usuario
-	 $ "escriba el mensaje"
-         $ mensaje
+         $private
+	     $"escriba el nombre de usuario"
+         $nombre-usuario
+	 	 $"escriba el mensaje"
+         $mensaje
 
 
 
 Desarrollado por:
-*Ruben Espinosa Roldan [rderoldan1](www.github.com/rderoldan1)
-*Jose Mateo Vidal Barrera [jvidalba1](www.www.github.com/jvidalba1)
+
+* Ruben Espinosa Roldan [rderoldan1](www.github.com/rderoldan1)
+* Jose Mateo Vidal Barrera [jvidalba1](www.www.github.com/jvidalba1)
 
